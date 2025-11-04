@@ -1,0 +1,13 @@
+.header {
+  width: 1000px;
+  height: 65px;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding-inline: 20px;
+}
