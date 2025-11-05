@@ -1,10 +1,9 @@
 import styles from './FinishBoard.module.css'
+import {useFinishButtonClick} from "../../store/useBoard.ts";
 
-interface FinishBoardProps {
-  onClick: () => void
-}
+export const FinishBoard = () => {
+  const finishButtonClick = useFinishButtonClick()
 
-export const FinishBoard = ({onClick}: FinishBoardProps) => {
   return (
     <div className={styles.overlay}>
       <div className={styles.content}>
@@ -12,7 +11,7 @@ export const FinishBoard = ({onClick}: FinishBoardProps) => {
         <p className={styles.description}>Вы нашли все пары!</p>
         <button
           className={styles.button}
-          onClick={onClick}
+          onClick={finishButtonClick}
         >Начать заново</button>
       </div>
     </div>

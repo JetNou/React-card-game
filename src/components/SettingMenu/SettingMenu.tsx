@@ -1,12 +1,11 @@
 import styles from './SettingMenu.module.css'
 import {useState} from "react";
 import * as React from "react";
+import {useIsOpenSetting} from "../../store/useHeader.ts";
 
-interface SettingMenuProps {
-  isOpen: boolean
-}
+export const SettingMenu = () => {
+  const isOpenSetting = useIsOpenSetting()
 
-export const SettingMenu = ({isOpen}: SettingMenuProps) => {
   const [selectedValue, setSelectedValue] = useState('44');
 
   const handleSelectClick = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -14,7 +13,7 @@ export const SettingMenu = ({isOpen}: SettingMenuProps) => {
   }
 
   return (
-    <aside className={`${styles.aside} ${isOpen ? styles.active : ""}`}>
+    <aside className={`${styles.aside} ${isOpenSetting ? styles.active : ""}`}>
       <h1 className={styles.title}>Настройки</h1>
 
       <h3 className={styles.polya}>Поле</h3>
