@@ -1,13 +1,16 @@
+import { Link } from 'react-router'
 import styles from './Authorization.module.css'
 
 export const Authorization = () => {
+
+
   return (
     <>
-      <button className={styles.authorization}>
+      <Link to="/login" className={styles.authorization}>
         <svg width="40" height="40" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M9.75 10.5C10.7884 10.5 11.8034 10.1921 12.6667 9.61522C13.5301 9.03834 14.203 8.2184 14.6004 7.25909C14.9977 6.29978 15.1017 5.24418 14.8991 4.22578C14.6966 3.20738 14.1965 2.27192 13.4623 1.53769C12.7281 0.803466 11.7926 0.303452 10.7742 0.10088C9.75582 -0.101693 8.70022 0.00227474 7.74091 0.399635C6.7816 0.796995 5.96166 1.4699 5.38478 2.33326C4.80791 3.19662 4.5 4.21165 4.5 5.25C4.5 6.64239 5.05312 7.97775 6.03769 8.96231C7.02226 9.94688 8.35761 10.5 9.75 10.5ZM9.75 12C6.49594 12 0 14.01 0 18V21H19.5V18C19.5 14.01 13.0041 12 9.75 12Z" fill="#21272A"/>
         </svg>
-      </button>
+      </Link>
     </>
   )
 }

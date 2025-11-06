@@ -20,13 +20,30 @@
 
 .inputLogin,
 .inputPassword {
-  width: 200px;
+  width: 250px;
   height: 35px;
   padding-left: 10px;
   border-radius: 15px;
   outline: none;
   border: 1px solid black;
-  font-size: 15px;
+  font-size: 17px;
+}
+
+.inputPassword {
+  width: 215px;
+  border-radius: 15px 0 0 15px;
+}
+
+.buttonShow {
+  width: 35px;
+  height: 35px;
+  background-color: black;
+  border: none;
+  outline: none;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .form {
@@ -37,7 +54,7 @@
   row-gap: 10px;
 }
 
-.button {
+.buttonSubmit {
   width: 100px;
   height: 40px;
   outline: none;
@@ -51,6 +68,26 @@
   margin-top: 50px;
 }
 
-.button:hover {
+.buttonSubmit:hover {
   scale: 1.05;
+}
+
+.inputWithButton {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonBack {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
